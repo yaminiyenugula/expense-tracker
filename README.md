@@ -112,3 +112,4 @@ A minimal production-ready full-stack Expense Tracker application.
 
 - `POST /expenses`: Create a new expense (JSON body: amount, category, description, date)
 - `GET /expenses`: Get list of expenses (query params: category for filter)
+
