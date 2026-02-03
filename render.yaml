@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: expense-tracker-backend
+    env: java
+    plan: starter
+    region: oregon
+    buildCommand: mvn -B clean package
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: SQLITE_DB_PATH
+        value: /srv/expenses/expenses.db
+    # Render automatically provides PORT; application binds to it via `server.port` in application.properties
